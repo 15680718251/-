@@ -1,7 +1,0 @@
-D:\实习\全球典型要素数据库增量更新系统\GIS.UI\bin\Release\GIS.UI.exe
-D:\实习\全球典型要素数据库增量更新系统\GIS.UI\bin\Release\GIS.UI.pdb
-D:\实习\全球典型要素数据库增量更新系统\GIS.UI\obj\x86\Release\GIS.UI.Forms.OSMDataBaseLinkForm.resources
-D:\实习\全球典型要素数据库增量更新系统\GIS.UI\obj\x86\Release\GIS.UI.Properties.Resources.resources
-D:\实习\全球典型要素数据库增量更新系统\GIS.UI\obj\x86\Release\GIS.UI.exe
-D:\实习\全球典型要素数据库增量更新系统\GIS.UI\obj\x86\Release\GIS.UI.pdb
-D:\实习\全球典型要素数据库增量更新系统\GIS.UI\obj\x86\Release\ResolveAssemblyReference.cache
