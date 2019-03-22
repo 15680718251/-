@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="indiaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="indiaEntities">
+    <EntitySet Name="RELATION_ALL_REL" EntityType="indiaModel.RELATION_ALL_REL" />
+    <EntitySet Name="WAY_NODE_REL" EntityType="indiaModel.WAY_NODE_REL" />
+    <EntitySet Name="NODES" EntityType="indiaModel.NODE" />
+    <EntitySet Name="RELATIONS" EntityType="indiaModel.RELATION" />
+    <EntitySet Name="WAYS" EntityType="indiaModel.WAY" />
+  </EntityContainer>
+  <EntityType Name="RELATION_ALL_REL">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="relationid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="memberid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="type" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="number" Nullable="false" />
+    <Property Type="String" Name="role" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WAY_NODE_REL">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="wayid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="nodeid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NODE">
+    <Key>
+      <PropertyRef Name="osmid" />
+    </Key>
+    <Property Type="String" Name="osmid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="user" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="uid" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="lat" Nullable="false" />
+    <Property Type="Double" Name="lon" Nullable="false" />
+    <Property Type="Boolean" Name="visible" />
+    <Property Type="Int16" Name="version" />
+    <Property Type="String" Name="changeset" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="timestamp" Nullable="false" />
+    <Property Type="Boolean" Name="issimple" Nullable="false" />
+    <Property Type="String" Name="fc" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="dsg" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="code" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="gbcode" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="gbdes" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="tags" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bz" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name_en" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name_zh" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RELATION">
+    <Key>
+      <PropertyRef Name="osmid" />
+    </Key>
+    <Property Type="String" Name="osmid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="user" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="uid" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="visible" />
+    <Property Type="Int16" Name="version" />
+    <Property Type="String" Name="changeset" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="timestamp" Nullable="false" />
+    <Property Type="Boolean" Name="issimple" Nullable="false" />
+    <Property Type="String" Name="fc" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="dsg" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="code" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="gbcode" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="gbdes" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="tags" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bz" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name_en" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name_zh" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="WAY">
+    <Key>
+      <PropertyRef Name="osmid" />
+    </Key>
+    <Property Type="String" Name="osmid" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="user" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="uid" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="visible" />
+    <Property Type="Int16" Name="version" />
+    <Property Type="String" Name="changeset" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="timestamp" Nullable="false" />
+    <Property Type="Boolean" Name="issimple" Nullable="false" />
+    <Property Type="String" Name="fc" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="dsg" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="code" MaxLength="2" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="gbcode" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="gbdes" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="tags" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="bz" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name_en" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="name_zh" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
