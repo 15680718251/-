@@ -1,5 +1,0 @@
-F:\全球典型要素更新系统\debug\gis_render.dll
-F:\全球典型要素更新系统\debug\gis_render.pdb
-F:\全球典型要素更新系统\0301\GIS.Render\obj\Debug\GIS.Render.csprojResolveAssemblyReference.cache
-F:\全球典型要素更新系统\0301\GIS.Render\obj\Debug\gis_render.dll
-F:\全球典型要素更新系统\0301\GIS.Render\obj\Debug\gis_render.pdb
