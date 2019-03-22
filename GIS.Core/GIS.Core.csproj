@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{91CEC9BF-462D-4B38-AA61-38F1F6F8FB72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GIS</RootNamespace>
+    <AssemblyName>gis_core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/gis_core/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\debug\gis_core.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;d:\vs2010安装\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;d:\vs2010安装\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\release\gis_core.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;d:\vs2010安装\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;d:\vs2010安装\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gdalconst_csharp, Version=1.0.4032.32303, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\gdalconst_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdal_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\osr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buffer\Coordinate.cs" />
+    <Compile Include="Buffer\MathTool.cs" />
+    <Compile Include="Buffer\PointBuffer.cs" />
+    <Compile Include="Buffer\PolylineBuffer.cs" />
+    <Compile Include="Converters\GeoConverter\GeometryConverter.cs" />
+    <Compile Include="Converters\WellKnownBinary\GeometryFromWKB.cs" />
+    <Compile Include="Converters\WellKnownBinary\GeometryToWKB.cs" />
+    <Compile Include="Converters\WellKnownBinary\WKBByteOrder.cs" />
+    <Compile Include="Converters\WellKnownBinary\WKBGeometryType.cs" />
+    <Compile Include="Converters\WellKnownText\GeometryFromWKT.cs" />
+    <Compile Include="Converters\WellKnownText\GeometryToWKT.cs" />
+    <Compile Include="Converters\WellKnownText\StreamTokenizer.cs" />
+    <Compile Include="Converters\WellKnownText\TokenType.cs" />
+    <Compile Include="Converters\WellKnownText\WKTStreamTokenizer.cs" />
+    <Compile Include="GDIAPI.cs" />
+    <Compile Include="GeoData\DataProviders\DbaseReader.cs" />
+    <Compile Include="GeoData\DataProviders\DxfFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GeoData\DataProviders\IProvider.cs" />
+    <Compile Include="GeoData\DataProviders\LQFile.cs" />
+    <Compile Include="GeoData\DataProviders\ShapeFile.cs" />
+    <Compile Include="GeoData\GeoDataRow.cs" />
+    <Compile Include="GeoData\GeoDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GeoData\GeoDataTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GeoGlobalStruct.cs" />
+    <Compile Include="Geometries\GeoArc.cs" />
+    <Compile Include="Geometries\GeoBound.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometries\GeoCurve.cs" />
+    <Compile Include="Geometries\GeoLabel.cs" />
+    <Compile Include="Geometries\GeoLinearRing.cs" />
+    <Compile Include="Geometries\GeoLineString.cs" />
+    <Compile Include="Geometries\Geometry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometries\GeometryCollection.cs" />
+    <Compile Include="Geometries\GeoMultiCurve.cs" />
+    <Compile Include="Geometries\GeoMultiLineString.cs" />
+    <Compile Include="Geometries\GeoMultiPoint.cs" />
+    <Compile Include="Geometries\GeoMultiPolygon.cs" />
+    <Compile Include="Geometries\GeoMultiSurface.cs" />
+    <Compile Include="Geometries\GeoPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Geometries\GeoPoint3D.cs" />
+    <Compile Include="Geometries\GeoPolygon.cs" />
+    <Compile Include="Geometries\GeoSpline.cs" />
+    <Compile Include="Geometries\GeoSurface.cs" />
+    <Compile Include="HandleShpsAndImage\HandleMutiPolygons.cs" />
+    <Compile Include="HandleShpsAndImage\HandleRemoveHoles.cs" />
+    <Compile Include="HandleShpsAndImage\HandleSmallPolygons.cs" />
+    <Compile Include="HandleShpsAndImage\HandleVectorUpdate.cs" />
+    <Compile Include="HandleShpsAndImage\ImageSpilter.cs" />
+    <Compile Include="Layer\GeoLayer.cs" />
+    <Compile Include="Layer\GeoRasterLayer.cs" />
+    <Compile Include="Layer\GeoVectorLayer.cs" />
+    <Compile Include="Map\GeoMap.cs" />
+    <Compile Include="Map\GeoMapDataImport.cs" />
+    <Compile Include="Map\GeoMapLayerControl.cs" />
+    <Compile Include="Map\GeoMapSelectControl.cs" />
+    <Compile Include="Map\GeoMapTransform.cs" />
+    <Compile Include="Map\ILayerControl.cs" />
+    <Compile Include="Map\LayerGroup.cs" />
+    <Compile Include="mm_Conv_Symbol\Atom_Arc.cs" />
+    <Compile Include="mm_Conv_Symbol\Atom_Base.cs" />
+    <Compile Include="mm_Conv_Symbol\Atom_Circle.cs" />
+    <Compile Include="mm_Conv_Symbol\Atom_DashLine.cs" />
+    <Compile Include="mm_Conv_Symbol\Atom_LineBase.cs" />
+    <Compile Include="mm_Conv_Symbol\Atom_PointBase.cs" />
+    <Compile Include="mm_Conv_Symbol\Atom_SolidLine.cs" />
+    <Compile Include="mm_Conv_Symbol\Atom_Line4p.cs" />
+    <Compile Include="mm_Conv_Symbol\LineSymbol.cs" />
+    <Compile Include="mm_Conv_Symbol\mm_conv_element.cs" />
+    <Compile Include="mm_Conv_Symbol\mm_Transform.cs" />
+    <Compile Include="mm_Conv_Symbol\PointSymbol.cs" />
+    <Compile Include="mm_Conv_Symbol\RegionSymbol.cs" />
+    <Compile Include="mm_Conv_Symbol\SymbolAlgorithm.cs" />
+    <Compile Include="mm_Conv_Symbol\SymbolBound.cs" />
+    <Compile Include="mm_Conv_Symbol\Symbol_Base.cs" />
+    <Compile Include="mm_Conv_Symbol\Symbol_Cache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaToVe\ObjectVecRLE\Douglas-Peucker.cs" />
+    <Compile Include="RaToVe\ObjectVecRLE\ObjectVec.cs" />
+    <Compile Include="RaToVe\ObjectVecRLE\RLETrans.cs" />
+    <Compile Include="RaToVe\ObjectVecRLE\Run.cs" />
+    <Compile Include="SpatialRelation\GeoAlgorithm.cs" />
+    <Compile Include="Style\Style.cs" />
+    <Compile Include="Style\VectorStyle.cs" />
+    <Compile Include="Symbolize.cs" />
+    <Compile Include="Toplogical\TpLinetoLine.cs" />
+    <Compile Include="Toplogical\TpLinetoPolygon.cs" />
+    <Compile Include="Toplogical\TpPointtoLines.cs" />
+    <Compile Include="Toplogical\TpPointtoPoint.cs" />
+    <Compile Include="Toplogical\TpPointtoPolygon.cs" />
+    <Compile Include="Toplogical\TpPolygontoPolygon.cs" />
+    <Compile Include="Toplogical\TpRelate.cs" />
+    <Compile Include="Toplogical\TpRelatemain.cs" />
+    <Compile Include="Utilities\ConfigHelper.cs" />
+    <Compile Include="Utilities\DebugLog.cs" />
+    <Compile Include="Utilities\ITransForm.cs" />
+    <Compile Include="Utilities\LogType.cs" />
+    <Compile Include="Utilities\Transform.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

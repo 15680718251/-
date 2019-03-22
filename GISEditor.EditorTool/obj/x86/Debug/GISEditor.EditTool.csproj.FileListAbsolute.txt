@@ -1,0 +1,3 @@
+D:\实习\全球典型要素数据库增量更新系统\GISEditor.EditorTool\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\实习\全球典型要素数据库增量更新系统\GISEditor.EditorTool\obj\x86\Debug\GISEditor.EditorTool.Properties.Resources.resources
+D:\实习\全球典型要素数据库增量更新系统\GISEditor.EditorTool\obj\x86\Debug\GISEditor.EditorTool.exe

@@ -1,0 +1,900 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35184D32-CA28-452E-8F59-F08C88AD843C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GIS.UI</RootNamespace>
+    <AssemblyName>gis_ui</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/gis_ui/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="gdalconst_csharp, Version=1.0.4032.32303, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\gdalconst_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdal_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\osr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AreaMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AttributeMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BufferMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Camera\ClassShowVideo.cs" />
+    <Compile Include="Camera\ClassVedioCapture.cs" />
+    <Compile Include="CreateIndex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EditMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\AreaQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AreaQueryForm.Designer.cs">
+      <DependentUpon>AreaQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttributeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttributeForm.Designer.cs">
+      <DependentUpon>AttributeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttributeQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttributeQueryForm.Designer.cs">
+      <DependentUpon>AttributeQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BufferQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BufferQueryForm.Designer.cs">
+      <DependentUpon>BufferQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CheckIncInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CheckIncInfoForm.Designer.cs">
+      <DependentUpon>CheckIncInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CurSymbolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CurSymbolForm.designer.cs">
+      <DependentUpon>CurSymbolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DrawLineSettringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DrawLineSettringForm.Designer.cs">
+      <DependentUpon>DrawLineSettringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChangeDetection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangeDetection.Designer.cs">
+      <DependentUpon>frmChangeDetection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHandleMutipolygons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHandleMutipolygons.Designer.cs">
+      <DependentUpon>FrmHandleMutipolygons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHandleSmallPolygons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHandleSmallPolygons.Designer.cs">
+      <DependentUpon>FrmHandleSmallPolygons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRemoveHoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRemoveHoles.Designer.cs">
+      <DependentUpon>FrmRemoveHoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSpiltVector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSpiltVector.designer.cs">
+      <DependentUpon>FrmSpiltVector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSpiltVectorProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSpiltVectorProgress.designer.cs">
+      <DependentUpon>FrmSpiltVectorProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSplitImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSplitImage.Designer.cs">
+      <DependentUpon>FrmSplitImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSplitImageTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSplitImageTest.Designer.cs">
+      <DependentUpon>FrmSplitImageTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmImageUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmImageUpdate.designer.cs">
+      <DependentUpon>FrmImageUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeometryComputation\ClearHangingLine.cs" />
+    <Compile Include="GeometryComputation\CreatePolygon.cs" />
+    <Compile Include="GeometryComputation\LinesSplitLines.cs" />
+    <Compile Include="GeometryComputation\LinkLine.cs" />
+    <Compile Include="GeometryComputation\PolygonCombinePolyg.cs" />
+    <Compile Include="GeometryComputation\PolygonIntersectPolygon.cs" />
+    <Compile Include="GeometryComputation\PolygonSubtractPolygon.cs" />
+    <Compile Include="GeometryComputation\SplitPolygon.cs" />
+    <Compile Include="GeometryComputation\ToplogicalplgAndLine.cs" />
+    <Compile Include="GeometryComputation\ToplogicalPlgAndPlg.cs" />
+    <Compile Include="Index\FrmCreateIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Index\FrmCreateIndex.Designer.cs">
+      <DependentUpon>FrmCreateIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Index\QuadTreeIndex.cs" />
+    <Compile Include="Index\QuadTreeNode.cs" />
+    <Compile Include="Test.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tool\MapRemoveInerRing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tool\MapRemoveHolesTool.cs" />
+    <Compile Include="Tool\MapVectorUpdate.cs" />
+    <Compile Include="VectorMerge\FrmVectorMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorMerge\FrmVectorMerge.designer.cs">
+      <DependentUpon>FrmVectorMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\MapClearDraftTool.cs" />
+    <Compile Include="Vectorize\FrmVectorizePara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vectorize\FrmVectorizePara.Designer.cs">
+      <DependentUpon>FrmVectorizePara.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vectorize\frmVectorizeProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vectorize\frmVectorizeProgress.Designer.cs">
+      <DependentUpon>frmVectorizeProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputXYForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputXYForm.designer.cs">
+      <DependentUpon>InputXYForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OpenDlg2Shpfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenDlg2Shpfiles.designer.cs">
+      <DependentUpon>OpenDlg2Shpfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OpenDlgShpfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OpenDlgShpfile.designer.cs">
+      <DependentUpon>OpenDlgShpfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PolygonSymbolizeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PolygonSymbolizeFrm.designer.cs">
+      <DependentUpon>PolygonSymbolizeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RasToVecForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RasToVecForm.Designer.cs">
+      <DependentUpon>RasToVecForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SaveCurLineSymForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaveCurLineSymForm.designer.cs">
+      <DependentUpon>SaveCurLineSymForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SaveCurPtSymForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaveCurPtSymForm.designer.cs">
+      <DependentUpon>SaveCurPtSymForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectPointLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectPointLayerForm.Designer.cs">
+      <DependentUpon>SelectPointLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IncAttributeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IncAttributeForm.Designer.cs">
+      <DependentUpon>IncAttributeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FontOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FontOptionForm.Designer.cs">
+      <DependentUpon>FontOptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputTextBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputTextBox.Designer.cs">
+      <DependentUpon>InputTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelForm.Designer.cs">
+      <DependentUpon>LabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabelLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelLayerForm.Designer.cs">
+      <DependentUpon>LabelLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabelLayerSettringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelLayerSettringForm.Designer.cs">
+      <DependentUpon>LabelLayerSettringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LayerSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LayerSettingForm.Designer.cs">
+      <DependentUpon>LayerSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LineToPolygonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LineToPolygonForm.Designer.cs">
+      <DependentUpon>LineToPolygonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PolygonToLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PolygonToLineForm.designer.cs">
+      <DependentUpon>PolygonToLineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SymbolDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SymbolDesigner.designer.cs">
+      <DependentUpon>SymbolDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SymD_linesymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SymD_pointsymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SymD_regionsymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SysParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SysParameterForm.Designer.cs">
+      <DependentUpon>SysParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\T_tolerance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\T_tolerance.designer.cs">
+      <DependentUpon>T_tolerance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDataMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OprtRollBack\OprtManager.cs" />
+    <Compile Include="ParameterMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Qlt_CtrMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QZY\QZY.cs" />
+    <Compile Include="RenderMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SymbolToolStripMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tool\MapAddArcTool.cs" />
+    <Compile Include="Tool\MapAddContourPtTool.cs" />
+    <Compile Include="Tool\MapAddRectangleTool.cs" />
+    <Compile Include="Tool\MapAddSplineTool.cs" />
+    <Compile Include="Tool\MapArcModifyTool.cs" />
+    <Compile Include="Tool\MapAreaQueryTool.cs" />
+    <Compile Include="Tool\MapAttributeEditTool.cs" />
+    <Compile Include="Tool\MapAddGeometryTool.cs" />
+    <Compile Include="Tool\MapAddLabelTool.cs" />
+    <Compile Include="Tool\MapAddLineStringTool.cs" />
+    <Compile Include="Tool\MapAddPolygonTool.cs" />
+    <Compile Include="Tool\MapAttributeQueryTool.cs" />
+    <Compile Include="Tool\MapBufferTool.cs" />
+    <Compile Include="Tool\MapChooseBufferLineTool.cs" />
+    <Compile Include="Tool\MapCopyGeometryTool.cs" />
+    <Compile Include="Tool\MapCreatPolygonTool.cs" />
+    <Compile Include="Tool\MapDeleteTool.cs" />
+    <Compile Include="Tool\MapDigIslandTool.cs" />
+    <Compile Include="Tool\MapGenerateLineToolDrawTrack.cs" />
+    <Compile Include="Tool\MapGenerateLineToolFunction.cs" />
+    <Compile Include="Tool\MapGenerateLineToolKeyDown.cs" />
+    <Compile Include="Tool\MapGenerateLineToolTCommand.cs" />
+    <Compile Include="Tool\MapLayerTransformTool.cs" />
+    <Compile Include="Tool\MapLineContinueTool.cs" />
+    <Compile Include="Tool\MapLineExtentTool.cs" />
+    <Compile Include="Tool\MapLineModifyTool.cs" />
+    <Compile Include="Tool\MapLineParallelTool.cs" />
+    <Compile Include="Tool\MapLineSmoothTool.cs" />
+    <Compile Include="Tool\MapLineSplitTool.cs" />
+    <Compile Include="Tool\MapLineToArcTool.cs" />
+    <Compile Include="Tool\MapLineToModifyTool.cs" />
+    <Compile Include="Tool\MapMesureAreaTool.cs" />
+    <Compile Include="Tool\MapMesureLengthTool.cs" />
+    <Compile Include="Tool\MapMirrorImageTool.cs" />
+    <Compile Include="Tool\MapMoveGeomtryTool.cs" />
+    <Compile Include="Tool\MapMoveLabelTool.cs" />
+    <Compile Include="Tool\MapNodeDeleteTool.cs" />
+    <Compile Include="Tool\MapOneLabelSettingTool.cs" />
+    <Compile Include="Tool\MapPointSelectTool.cs" />
+    <Compile Include="Tool\MapPolygonCombineTool.cs" />
+    <Compile Include="Tool\MapPolygonIntersectTool.cs" />
+    <Compile Include="Tool\MapPolygonSplitTool.cs" />
+    <Compile Include="Tool\MapPolygonSubtractTool.cs" />
+    <Compile Include="Tool\MapPolygontoLineTool.cs" />
+    <Compile Include="Tool\MapRasterToVectorTool.cs" />
+    <Compile Include="Tool\MapRegionSelectTool.cs" />
+    <Compile Include="Tool\MapRotateGeometryTool.cs" />
+    <Compile Include="Tool\MapRotateLabelTool.cs" />
+    <Compile Include="Tool\MapSpiltLineTool.cs" />
+    <Compile Include="Tool\MapSplineModifyTool.cs" />
+    <Compile Include="Tool\MapStretchLabelTool.cs" />
+    <Compile Include="Tool\MapDeleteLabelTool.cs" />
+    <Compile Include="UIEventArgs\EagleMapEventArgs.cs" />
+    <Compile Include="LayerControlMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tool\MapAddPointTool.cs" />
+    <Compile Include="Tool\MapMoveNodeTool.cs" />
+    <Compile Include="Tool\MapPanTool.cs" />
+    <Compile Include="Tool\MapGenerateLineToolMouseDown.cs" />
+    <Compile Include="Tool\MapTool.cs" />
+    <Compile Include="Tool\MapZoomTool.cs" />
+    <Compile Include="TransformMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIEventArgs\OutPutEventArgs.cs" />
+    <Compile Include="SymbolDesignerMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GPSTotalStatioinMapUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vectorize\ObjectVec.cs" />
+    <Compile Include="Vectorize\Run.cs" />
+    <Compile Include="VectorMerge\frmVectorMergeProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorMerge\frmVectorMergeProgress.Designer.cs">
+      <DependentUpon>frmVectorMergeProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VectorMerge\HandleShpsMerge.cs" />
+    <Compile Include="VectorSmallPolygonsMerge\FrmSmallPolygonsMerge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorSmallPolygonsMerge\FrmSmallPolygonsMerge.designer.cs">
+      <DependentUpon>FrmSmallPolygonsMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VectorSmallPolygonsMerge\frmSmallPolygonsMergeProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorSmallPolygonsMerge\frmSmallPolygonsMergeProgress.Designer.cs">
+      <DependentUpon>frmSmallPolygonsMergeProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VectorSmallPolygonsMerge\HandleUnionSmallPolygons.cs" />
+    <Compile Include="VectorSmallPolygonsMerge\SmallPolygonsMerge.cs" />
+    <Compile Include="VectorUpdate\FrmVectorUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorUpdate\FrmVectorUpdate.designer.cs">
+      <DependentUpon>FrmVectorUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VectorUpdate\frmVectorUpdateProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorUpdate\frmVectorUpdateProgress.Designer.cs">
+      <DependentUpon>frmVectorUpdateProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VectorUpdate\HandleVectorUpdate.cs" />
+    <Compile Include="VectorUpdate\FrmVectorUpdateByIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorUpdate\FrmVectorUpdateByIndex.designer.cs">
+      <DependentUpon>FrmVectorUpdateByIndex.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GIS.Core\GIS.Core.csproj">
+      <Project>{91CEC9BF-462D-4B38-AA61-38F1F6F8FB72}</Project>
+      <Name>GIS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GIS.Increment\GIS.Increment.csproj">
+      <Project>{0B14C763-A1C4-480B-B81A-506157ADFB0A}</Project>
+      <Name>GIS.Increment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GIS.Render\GIS.Render.csproj">
+      <Project>{03767FB4-C1C4-489D-B113-E127E1214695}</Project>
+      <Name>GIS.Render</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GIS.UI\GIS.UI.csproj">
+      <Project>{E098EF74-754C-4AB6-82A8-4D92713F489C}</Project>
+      <Name>GIS.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AreaQueryForm.resx">
+      <DependentUpon>AreaQueryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttributeForm.resx">
+      <DependentUpon>AttributeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttributeQueryForm.resx">
+      <DependentUpon>AttributeQueryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BufferQueryForm.resx">
+      <DependentUpon>BufferQueryForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CheckIncInfoForm.resx">
+      <DependentUpon>CheckIncInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CurSymbolForm.resx">
+      <DependentUpon>CurSymbolForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DrawLineSettringForm.resx">
+      <DependentUpon>DrawLineSettringForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChangeDetection.resx">
+      <DependentUpon>frmChangeDetection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHandleMutipolygons.resx">
+      <DependentUpon>FrmHandleMutipolygons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmHandleSmallPolygons.resx">
+      <DependentUpon>FrmHandleSmallPolygons.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRemoveHoles.resx">
+      <DependentUpon>FrmRemoveHoles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSpiltVector.resx">
+      <DependentUpon>FrmSpiltVector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSpiltVectorProgress.resx">
+      <DependentUpon>FrmSpiltVectorProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSplitImage.resx">
+      <DependentUpon>FrmSplitImage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSplitImageTest.resx">
+      <DependentUpon>FrmSplitImageTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmImageUpdate.resx">
+      <DependentUpon>FrmImageUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Index\FrmCreateIndex.resx">
+      <DependentUpon>FrmCreateIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorMerge\FrmVectorMerge.resx">
+      <DependentUpon>FrmVectorMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vectorize\FrmVectorizePara.resx">
+      <DependentUpon>FrmVectorizePara.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vectorize\frmVectorizeProgress.resx">
+      <DependentUpon>frmVectorizeProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputXYForm.resx">
+      <DependentUpon>InputXYForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenDlg2Shpfiles.resx">
+      <DependentUpon>OpenDlg2Shpfiles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OpenDlgShpfile.resx">
+      <DependentUpon>OpenDlgShpfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PolygonSymbolizeFrm.resx">
+      <DependentUpon>PolygonSymbolizeFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RasToVecForm.resx">
+      <DependentUpon>RasToVecForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaveCurLineSymForm.resx">
+      <DependentUpon>SaveCurLineSymForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaveCurPtSymForm.resx">
+      <DependentUpon>SaveCurPtSymForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectPointLayerForm.resx">
+      <DependentUpon>SelectPointLayerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IncAttributeForm.resx">
+      <DependentUpon>IncAttributeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FontOptionForm.resx">
+      <DependentUpon>FontOptionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputTextBox.resx">
+      <DependentUpon>InputTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelForm.resx">
+      <DependentUpon>LabelForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelLayerForm.resx">
+      <DependentUpon>LabelLayerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelLayerSettringForm.resx">
+      <DependentUpon>LabelLayerSettringForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LayerSettingForm.resx">
+      <DependentUpon>LayerSettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LineToPolygonForm.resx">
+      <DependentUpon>LineToPolygonForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PolygonToLineForm.resx">
+      <DependentUpon>PolygonToLineForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SymbolDesigner.resx">
+      <DependentUpon>SymbolDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SysParameterForm.resx">
+      <DependentUpon>SysParameterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\T_tolerance.resx">
+      <DependentUpon>T_tolerance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorMerge\frmVectorMergeProgress.resx">
+      <DependentUpon>frmVectorMergeProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorSmallPolygonsMerge\FrmSmallPolygonsMerge.resx">
+      <DependentUpon>FrmSmallPolygonsMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorSmallPolygonsMerge\frmSmallPolygonsMergeProgress.resx">
+      <DependentUpon>frmSmallPolygonsMergeProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorUpdate\FrmVectorUpdate.resx">
+      <DependentUpon>FrmVectorUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorUpdate\frmVectorUpdateProgress.resx">
+      <DependentUpon>frmVectorUpdateProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorUpdate\FrmVectorUpdateByIndex.resx">
+      <DependentUpon>FrmVectorUpdateByIndex.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Resources\MC005.bmp" />
+    <Compile Include="VectorUpdate\HandleVectorUpdateByIndex.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MC021.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MC022.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\polygon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomIn.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoomout.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\保存.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\编辑线.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\裁切.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点层.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\点选.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\多边形.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\放大.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分解.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\混合层.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\记录观测点.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\节点移动.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\镜像.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\矩形.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\矩形面.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\框选.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\拉伸.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\另存.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\漫游.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\面分割.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\面合并.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\全图.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\任意多边形选择.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\三点矩形.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删除.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\刷新.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\缩小.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加文件.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\椭圆.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\文本.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\线.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\线修改.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\线延伸.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\相交.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新建工程.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选择对象.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选择移动.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\样条曲线.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\影像层图案.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\圆.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\圆弧.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\圆面.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\注.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\注记.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E098EF74-754C-4AB6-82A8-4D92713F489C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GIS.UI</RootNamespace>
+    <AssemblyName>GIS.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\GIS.UI.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;d:\vs2010安装\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;d:\vs2010安装\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\GIS.UI.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;d:\vs2010安装\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;d:\vs2010安装\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ADF.Local, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DeveloperKit10.1\DotNet\ESRI.ArcGIS.DataSourcesRaster.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRasterUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\ArcGIS\DeveloperKit10.1\DotNet\ESRI.ArcGIS.DataSourcesRasterUI.dll</HintPath>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Output, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
+    <Reference Include="gdalconst_csharp, Version=1.0.4032.32303, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\gdalconst_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdal_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Npgsql_dll\new\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\Oracle.ManagedDataAccess\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.4032.32302, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\全球典型要素数据库增量更新系统\bin\Debug\osr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdditionalTool\AddMap.cs" />
+    <Compile Include="AdditionalTool\OperateMap.cs" />
+    <Compile Include="AdditionalTool\OracleDBHelper.cs" />
+    <Compile Include="AdditionalTool\ShpHelper.cs" />
+    <Compile Include="AdditionalTool\TimeHelper.cs" />
+    <Compile Include="AdditionalTool\TopHelper.cs" />
+    <Compile Include="CombineOsc.cs" />
+    <Compile Include="Entity\Layers.cs" />
+    <Compile Include="Entity\OscDataNode.cs" />
+    <Compile Include="Entity\OscDataRelation.cs" />
+    <Compile Include="Entity\OscDataWay.cs" />
+    <Compile Include="Entity\Point.cs" />
+    <Compile Include="Entity\Poly.cs" />
+    <Compile Include="Entity\Relation.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddText.Designer.cs">
+      <DependentUpon>AddText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AnnotationDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AnnotationDisplay.Designer.cs">
+      <DependentUpon>AnnotationDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AreaElementUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AreaElementUpdate.Designer.cs">
+      <DependentUpon>AreaElementUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CombineOSC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CombineOSC.Designer.cs">
+      <DependentUpon>CombineOSC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExcelToOSM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExcelToOSM.Designer.cs">
+      <DependentUpon>ExcelToOSM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUniqueValueRender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUniqueValueRender.Designer.cs">
+      <DependentUpon>frmUniqueValueRender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\hist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\hist.Designer.cs">
+      <DependentUpon>hist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\historyQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\historyQuery.Designer.cs">
+      <DependentUpon>historyQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Identifier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Identifier.Designer.cs">
+      <DependentUpon>Identifier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IncrementDataDispose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IncrementDataDispose.Designer.cs">
+      <DependentUpon>IncrementDataDispose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ElementMatchUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ElementMatchUpdate.Designer.cs">
+      <DependentUpon>ElementMatchUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LineElementMatchUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LineElementMatchUpdate.Designer.cs">
+      <DependentUpon>LineElementMatchUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModelTrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModelTrans.Designer.cs">
+      <DependentUpon>ModelTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OscDataTODB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OscDataTODB.Designer.cs">
+      <DependentUpon>OscDataTODB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OSMDataBaseLinkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OSMDataBaseLinkForm.Designer.cs">
+      <DependentUpon>OSMDataBaseLinkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OSMTODB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OSMTODB.Designer.cs">
+      <DependentUpon>OSMTODB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OSMToShapeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OSMToShapeForm.Designer.cs">
+      <DependentUpon>OSMToShapeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\professionDataToDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\professionDataToDB.Designer.cs">
+      <DependentUpon>professionDataToDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SaveEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaveEdit.Designer.cs">
+      <DependentUpon>SaveEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowMap.Designer.cs">
+      <DependentUpon>ShowMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SHPToDataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SHPToDataBase.Designer.cs">
+      <DependentUpon>SHPToDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\txt2DB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\txt2DB.Designer.cs">
+      <DependentUpon>txt2DB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelTranByOSM\RuleItem.cs" />
+    <Compile Include="ModelTranByOSM\TEModelTrans.cs" />
+    <Compile Include="ModelTranByOSM\TypicalElementTableHelper.cs" />
+    <Compile Include="OSMModelTrans\DataBaseProcess.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateTool\AreaElementUpdateHelper.cs" />
+    <Compile Include="WellKnownText\GeometryFromWKT.cs" />
+    <Compile Include="WellKnownText\GeometryToWKT.cs" />
+    <Compile Include="WellKnownText\SpatialReference.cs" />
+    <Compile Include="WellKnownText\StreamTokenizer.cs" />
+    <Compile Include="WellKnownText\TokenType.cs" />
+    <Compile Include="WellKnownText\WktStreamTokenizer.cs" />
+    <EmbeddedResource Include="Forms\AddText.resx">
+      <DependentUpon>AddText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AnnotationDisplay.resx">
+      <DependentUpon>AnnotationDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AreaElementUpdate.resx">
+      <DependentUpon>AreaElementUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CombineOSC.resx">
+      <DependentUpon>CombineOSC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExcelToOSM.resx">
+      <DependentUpon>ExcelToOSM.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUniqueValueRender.resx">
+      <DependentUpon>frmUniqueValueRender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\hist.resx">
+      <DependentUpon>hist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\historyQuery.resx">
+      <DependentUpon>historyQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Identifier.resx">
+      <DependentUpon>Identifier.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IncrementDataDispose.resx">
+      <DependentUpon>IncrementDataDispose.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ElementMatchUpdate.resx">
+      <DependentUpon>ElementMatchUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LineElementMatchUpdate.resx">
+      <DependentUpon>LineElementMatchUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModelTrans.resx">
+      <DependentUpon>ModelTrans.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OscDataTODB.resx">
+      <DependentUpon>OscDataTODB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OSMDataBaseLinkForm.resx">
+      <DependentUpon>OSMDataBaseLinkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OSMTODB.resx">
+      <DependentUpon>OSMTODB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OSMToShapeForm.resx">
+      <DependentUpon>OSMToShapeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\professionDataToDB.resx">
+      <DependentUpon>professionDataToDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaveEdit.resx">
+      <DependentUpon>SaveEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowMap.resx">
+      <DependentUpon>ShowMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SHPToDataBase.resx">
+      <DependentUpon>SHPToDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\txt2DB.resx">
+      <DependentUpon>txt2DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GIS.Core\GIS.Core.csproj">
+      <Project>{91CEC9BF-462D-4B38-AA61-38F1F6F8FB72}</Project>
+      <Name>GIS.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ORADCLib">
+      <Guid>{92096210-97DF-11CF-9F27-02608C4BF3B5}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
